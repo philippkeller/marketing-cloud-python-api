@@ -19,6 +19,8 @@ To send emails over marketing cloud you need to do the following in the UI (sadl
 the usage then is the following:
 
 ```python
+from marketing_cloud import MarketingCloud
+
 mc = MarketingCloud(client_id, secret_id, subdomain, account_id)
 definitionKey = 'my-identifier'
 
