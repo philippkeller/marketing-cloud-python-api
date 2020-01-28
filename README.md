@@ -44,7 +44,7 @@ Now you can start sending mails.  *Important*: the key of the dict need to match
 (including upper/smaller case) otherwise the send_email succeeds but
 the mail is never sent…:
 
-```
+```python
 mc.send_email(definitionKey, 'hans@meier.ch', dict(template_var1='Kurt'))
 ```
 
