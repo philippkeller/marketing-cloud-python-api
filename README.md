@@ -50,3 +50,10 @@ the mail is never sent…:
 mc.send_email(definitionKey, 'hans@meier.ch', dict(template_var1='Kurt'))
 ```
 
+## Reports
+
+As this is not a promotional mail, it does not appear in the normal places on Marketing Cloud.
+
+But there are some basic stats available at Email > Tracking > Tracking Reports > Triggered Sends tracking
+
+Choose the definitionKey in the dropdown and you'll see bounces, opening rates, click rates, etc.
