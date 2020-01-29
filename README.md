@@ -2,7 +2,7 @@ Small wrapper including documentation how to use the marketing cloud REST api.
 
 The [official documentation](https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-apis.meta/mc-apis/transactional-messaging-get-started.htm) is lacking at some spots, so this repo is meant as a starting point for building your own wrapper.
 
-# How to send an email over marketing cloud:
+# How to send an email over marketing cloud
 
 To send emails over marketing cloud you need to do the following in the UI (sadly the REST api does not cover these steps, the SOAP api is more complete but I couldn't motivate myself to step into the soap land…)
 
