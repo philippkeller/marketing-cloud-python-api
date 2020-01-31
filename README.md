@@ -45,7 +45,7 @@ if not check_email_definition(definitionKey):
 
     # name needs to be unique
     name = f"My Mailing {suffix}" 
-    mc.create_email_definition(definitionKey, 'My Email Definition',
+    mc.create_email_definition(definitionKey, name,
                               'Description…', customerKey, dataExtension)
 
 ```
