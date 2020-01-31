@@ -20,23 +20,31 @@ the usage then is the following:
 
 ```python
 from marketing_cloud import MarketingCloud
+import datetime
 
 mc = MarketingCloud(client_id, secret_id, subdomain, account_id)
-definitionKey = 'my-identifier'
 
-# this is the customer key (an id with dashes) of the email message from step 1:
-customerKey = '…'
-
-# this is the external key of the list from step 2
-subscriptionList = '…'
-
-# this is the external key of the data extension from step 3
-dataExtension = '…'
+# definitionKey is your choice. The docs recommend a new key every week.
+# also, if you change the email template you need a new email definition
+# (-> new definitionKey), otherwise the change is not taken
+suffix = datetime.date.today().strftime('%W')
+definitionKey = f'my-identifier-week-{suffix}'
 
 # the email definition puts the three steps into a relation
 # you can later reuse, so the create_email_definition needs to
 # be done only once per combination of the three steps.
-if not check_email_definition(dataExtension):
+if not check_email_definition(definitionKey):
+    # this is the customer key (an id with dashes) of the email message from step 1:
+    customerKey = '…'
+
+    # this is the external key of the list from step 2
+    subscriptionList = '…'
+
+    # this is the external key of the data extension from step 3
+    dataExtension = '…'
+
+    # name needs to be unique
+    name = f"My Mailing {suffix}" 
     mc.create_email_definition(definitionKey, 'My Email Definition',
                               'Description…', customerKey, dataExtension)
 
